@@ -1,0 +1,15 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+    {{ partialCached "head/css.html" . }}
+    {{ partialCached "head/js.html" . }}
+    {{ $style := resources.Get "style.css" }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23ae81ff'/></svg>">
+
+    {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+    {{ end }}
+</head>

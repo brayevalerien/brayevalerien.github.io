@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="flex flex-col items-center bg-zinc-100 dark:bg-neutral-900 text-black dark:text-zinc-200 text-justify">
+  <div class="w-full max-w-2xl px-4">
+    {{ partial "header.html" . }}
+  <main>
+    {{ partial "posts_list.html" . }}
+    
+  </main>
+  <footer class="border-t-2 text-xs pt-4 mt-10">
+    {{ partial "footer.html" . }}
+  </footer>
+  </div>
+</body>
+</html>
