@@ -1,4 +1,4 @@
-baseURL = ''
+baseURL = 'home.brayevalerien.com'
 languageCode = 'en-us'
 title = "brayevalerien"
 theme = 'blog-theme'
