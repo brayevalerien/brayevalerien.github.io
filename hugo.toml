@@ -1,4 +1,5 @@
 baseURL = 'https://brayevalerien.com'
+canonifyURLs = true
 languageCode = 'en-us'
 title = "brayevalerien"
 theme = 'blog-theme'
