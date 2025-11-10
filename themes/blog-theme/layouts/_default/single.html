@@ -1,4 +1,17 @@
 {{ define "main" }}
 
+  <div class="mb-8 border-b pb-4">
+    <h1 class="text-4xl font-bold mb-2">{{ .Title }}</h1>
+    {{ if .Params.Subtitle }}
+    <p class="text-lg italic text-gray-600 dark:text-gray-400 mb-4">{{ .Params.Subtitle }}</p>
+    {{ end }}
+    <div class="text-sm text-gray-500 dark:text-gray-400">
+      <span>Published: {{ .Date.Format "January 2, 2006" }}</span>
+      {{ if and .Lastmod (ne .Date .Lastmod) }}
+      <span class="ml-4">Updated: {{ .Lastmod.Format "January 2, 2006" }}</span>
+      {{ end }}
+    </div>
+  </div>
+
   {{ .Content }}
 {{ end }}

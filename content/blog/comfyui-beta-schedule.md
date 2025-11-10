@@ -2,6 +2,7 @@
 title = "Understanding ComfyUI's Beta Noise Schedule"
 subtitle = "How beta distribution sampling improves diffusion model quality with fewer steps and how to use split-sampling in ComfyUI."
 date = 2025-11-10
+lastmod = 2025-11-10
 draft = false
 +++
 
