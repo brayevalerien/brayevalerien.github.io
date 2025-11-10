@@ -62,7 +62,7 @@ The beta scheduler outputs a sigma schedule that you feed into a sampler. With K
 This is different from the `denoise` parameter in basic KSampler. With beta scheduling:
 
 $$
-\text{effective\_denoise} = \frac{\text{end\_at\_step} - \text{start\_at\_step}}{\text{steps}}
+\text{effective_denoise} = \frac{\text{end_at_step} - \text{start_at_step}}{\text{steps}}
 $$
 
 If you use `steps=20`, `start_at_step=0`, `end_at_step=20`, you get full denoising. But if you use `start_at_step=5`, `end_at_step=20`, you only denoise through the portion of the schedule corresponding to those steps.
