@@ -151,6 +151,17 @@ I only explored head 0 of layer 0 here, but GPT-2 XL has $25 \times 48 = 1200$ a
 
 You can find the code on [GitHub](https://github.com/brayevalerien/bad-apple-but-its-gpt2). Feel free to go through it and mess with it and explore the ideas I mentioned above or render your own videos!
 
+<details>
+<summary>Related cool projects</summary>
+
+As far as I know, nobody has used attention maps as a video display before, but here are some fun related projects that play with neural network internals in creative ways:
+- [Fluent Dreaming for Language Models](https://arxiv.org/abs/2402.01702): optimizes text inputs to maximally activate specific neurons in LLMs while keeping the text fluent. The text equivalent of DeepDream.
+- [Prompt-to-Prompt](https://prompt-to-prompt.github.io/): directly manipulates cross-attention maps in Stable Diffusion to control image editing, showing that attention maps can be treated as controllable canvases.
+- [GameNGen](https://gamengen.github.io/): Doom running on a diffusion model. The neural network IS the game engine.
+- [llama.ttf](https://fuglede.github.io/llama.ttf/): a 60MB font file that contains an entire LLM and its inference engine, running inside HarfBuzz WASM.
+
+</details>
+
 ## References
 [^1]: https://knowyourmeme.com/memes/bad-apple
 [^2]: Martí, R. (2003). Multi-Start Methods. In: Handbook of Metaheuristics. Springer. https://link.springer.com/chapter/10.1007/0-306-48056-5_12
