@@ -10,6 +10,7 @@ body {
   /* font-family: "Montserrat", sans-serif; */
   font-family: "Lusitana", serif;
   font-size: 1.05rem;
+  overflow-x: hidden;
 }
 
 .title {
@@ -125,6 +126,17 @@ ul {
 img {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+mjx-container {
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 p em {
