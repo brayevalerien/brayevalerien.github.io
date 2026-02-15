@@ -193,3 +193,11 @@ ul a:hover {
 details:not([open]) > summary {
   margin-bottom: 1rem;
 }
+
+aside.note {
+  border-left: 0.22rem solid #AE81FF;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
