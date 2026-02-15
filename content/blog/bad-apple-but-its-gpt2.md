@@ -90,9 +90,7 @@ where $\mathcal{M}$ is the set of positions in the lower triangle (causal mask).
 #### Multi-seed exploration
 The attention landscape is non-convex and Adam can get stuck in bad local minima. To deal with this, I start from 3 random initializations and run each for 375 steps (explore phase), keep whichever seed produced the lowest loss, then continue optimizing that one for 1125 more steps (refine phase). That's 1500 effective optimization steps per frame. I also use a cosine annealing scheduler with warm restarts to periodically reset the learning rate and escape plateaus.
 
-<aside class="note">
-This is a well-known technique called multi-start optimization[^2]: run the same optimizer from different random starting points and keep the best result. It's one of the easiest way to help the optimizer to converge on non-convex or complex loss landscape.
-</aside>
+> This is a well-known technique called multi-start optimization[^2]: run the same optimizer from different random starting points and keep the best result. It's one of the easiest ways to help the optimizer converge on non-convex or complex loss landscapes.
 
 #### Post-processing
 The optimization gives raw attention logits, but turning those into a good-looking frame takes some work. Raw attention weights after softmax are all very close to each other (they form a probability distribution, most values hover near $1/n$), so I apply:
