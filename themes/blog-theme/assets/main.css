@@ -137,6 +137,12 @@ iframe {
 mjx-container {
   overflow-x: auto;
   max-width: 100%;
+  font-size: 110% !important;
+}
+
+mjx-container[display="true"] {
+  text-align: center !important;
+  margin: 1rem 0 !important;
 }
 
 p em {
