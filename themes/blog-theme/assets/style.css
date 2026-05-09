@@ -554,6 +554,22 @@ video {
   --tw-contain-style:  ;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .mr-8 {
   margin-right: 2rem;
 }
@@ -606,6 +622,10 @@ video {
   justify-content: space-between;
 }
 
+.border-b {
+  border-bottom-width: 1px;
+}
+
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -637,6 +657,10 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .pl-8 {
@@ -693,6 +717,10 @@ video {
   line-height: 1rem;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -710,11 +738,23 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
 
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"); */
+
+/* monokai palette: bg/fg invert between light and dark */
 
 body {
   /* font-family: "Inter", sans-serif; */
@@ -722,10 +762,24 @@ body {
   /* font-family: "Montserrat", sans-serif; */
   font-family: "Lusitana", serif;
   font-size: 1.05rem;
+  overflow-x: hidden;
+  background-color: #f8f8f2 !important;
+  color: #272822 !important;
+}
+
+.dark body {
+  background-color: #272822 !important;
+  color: #f8f8f2 !important;
 }
 
 .title {
   font-family: "Roboto Slab", serif;
+}
+
+/* brand title (brayevalerien.) — monokai primary purple */
+
+header a.title {
+  color: #ae81ff;
 }
 
 p {
@@ -776,16 +830,16 @@ p {
 }
 
 pre {
-  background-color: #272a36;
+  background-color: #1e1f1c;
   padding: 1rem !important;
   border-radius: 0.5rem !important;
   font-size: 0.85rem !important;
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
-  border-left: 0.25rem solid #e11d47 !important;
+  border-left: 0.25rem solid #ae81ff !important;
 }
 
-/* 
+/*
 .dark .highlight pre {
   background-color: red !important;
 } */
@@ -793,19 +847,24 @@ pre {
 sup a{
   font-size: 0.75rem;
   text-decoration: underline;
-  color: #5BC0BE;
+  color: #66d9ef;
   font-weight: 700
 }
 
 .dark p code {
-  background-color: #2B2E3B !important;
+  background-color: #1e1f1c !important;
 }
 
 p code {
   padding: 0.15rem !important;
   border-radius: 0.25rem !important;
   font-size: 0.9rem !important;
-  background-color: #DCDEE5 !important;
+  background-color: #e8e6df !important;
+  color: #ae81ff !important;
+}
+
+.dark p code {
+  color: #ae81ff !important;
 }
 
 pre {
@@ -841,11 +900,28 @@ ul {
 img {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+mjx-container {
+  overflow-x: auto;
+  max-width: 100%;
+  font-size: 110% !important;
+}
+
+mjx-container[display="true"] {
+  text-align: center !important;
+  margin: 1rem 0 !important;
 }
 
 p em {
   display: inline-block;
-  border-left: 0.22rem solid #e11d47 !important;
+  border-left: 0.22rem solid #ae81ff !important;
   margin: 0 0 1rem;
   padding-left: 1rem;
   /* Padding to apply space between the border and the text */
@@ -860,7 +936,7 @@ p em::before {
   height: 100%;
   left: 0;
   width: 0.25rem;
-  background-color: #e11d47;
+  background-color: #ae81ff;
 }
 
 p a {
@@ -868,8 +944,8 @@ p a {
 }
 
 p a:hover {
-  color: #5BC0BE;
-  opacity: 0.8;
+  color: #66d9ef;
+  opacity: 1;
 }
 
 ul a {
@@ -877,14 +953,14 @@ ul a {
 }
 
 ul a:hover {
-  color: #5BC0BE;
-  opacity: 0.8;
+  color: #66d9ef;
+  opacity: 1;
 }
 
 #TableOfContents {
   padding: 10px;
   padding-left: 20px;
-  border-left: 0.15rem solid #6E6D80 !important;
+  border-left: 0.15rem solid #75715e !important;
   margin-bottom: 1.5rem;
   opacity: 0.7;
 }
@@ -913,6 +989,14 @@ details:not([open]) > summary {
   margin-bottom: 1rem;
 }
 
+aside.note {
+  border-left: 0.22rem solid #AE81FF;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -938,6 +1022,11 @@ details:not([open]) > summary {
 .dark\:bg-neutral-900:where(.dark, .dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+}
+
+.dark\:text-gray-400:where(.dark, .dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .dark\:text-zinc-200:where(.dark, .dark *) {
