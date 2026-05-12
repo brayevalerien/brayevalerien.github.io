@@ -9,3 +9,5 @@ tmp
 hugo.exe
 hugo.linux
 hugo.darwin
+
+.venv

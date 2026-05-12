@@ -82,7 +82,7 @@ p {
 pre {
   background-color: #1e1f1c;
   padding: 1rem !important;
-  border-radius: 0.5rem !important;
+  border-radius: 0 !important;
   font-size: 0.85rem !important;
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
@@ -106,7 +106,7 @@ sup a{
 
 p code {
   padding: 0.15rem !important;
-  border-radius: 0.25rem !important;
+  border-radius: 0 !important;
   font-size: 0.9rem !important;
   background-color: #e8e6df !important;
   color: #ae81ff !important;
