@@ -1,0 +1,5 @@
+{{- $type := .Get "type" | default "" -}}
+<aside class="callout {{ $type }}">
+{{- if $type }}<div class="callout-label">{{ $type }}</div>{{ end }}
+{{ .Inner | $.Page.RenderString }}
+</aside>

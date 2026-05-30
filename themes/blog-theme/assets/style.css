@@ -832,7 +832,7 @@ p {
 pre {
   background-color: #1e1f1c;
   padding: 1rem !important;
-  border-radius: 0.5rem !important;
+  border-radius: 0 !important;
   font-size: 0.85rem !important;
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
@@ -857,7 +857,7 @@ sup a{
 
 p code {
   padding: 0.15rem !important;
-  border-radius: 0.25rem !important;
+  border-radius: 0 !important;
   font-size: 0.9rem !important;
   background-color: #e8e6df !important;
   color: #ae81ff !important;
@@ -995,6 +995,118 @@ aside.note {
   margin: 1rem 0;
   opacity: 0.8;
   font-size: 0.95rem;
+}
+
+/* booktabs-style table: 3 horizontal rules only, no verticals, no inner row dividers */
+
+table {
+  border-collapse: collapse;
+  margin: 1.25rem auto;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+thead {
+  border-top: 1.5px solid currentColor;
+}
+
+thead tr {
+  border-bottom: 1px solid currentColor;
+}
+
+tbody tr:last-child {
+  border-bottom: 1.5px solid currentColor;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.4rem 1rem 0.4rem 0;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+th {
+  font-weight: 400;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* monokai-rice callout: left border + subtle bg tint, tertiary-cyan accent (default) */
+
+blockquote {
+  border-left: 3px solid #66d9ef;
+  background-color: rgba(102, 217, 239, 0.07);
+  padding: 0.6rem 1rem;
+  margin: 1.25rem 0;
+  font-style: italic;
+}
+
+/* typed callouts: shortcode <aside> + GitHub-alert blockquotes share these */
+
+.callout, blockquote.callout {
+  border-left: 3px solid #ae81ff;
+  background-color: rgba(174, 129, 255, 0.07);
+  padding: 0.6rem 1rem;
+  margin: 1.25rem 0;
+  font-style: normal;
+}
+
+.callout.note,      blockquote.callout.note      {
+  border-left-color: #e6db74;
+  background-color: rgba(230, 219, 116, 0.07);
+}
+
+.callout.hint,      blockquote.callout.hint      {
+  border-left-color: #66d9ef;
+  background-color: rgba(102, 217, 239, 0.07);
+}
+
+.callout.ok,        blockquote.callout.ok        {
+  border-left-color: #a6e22e;
+  background-color: rgba(166, 226, 46, 0.07);
+}
+
+.callout.warn,      blockquote.callout.warn,
+.callout.important, blockquote.callout.important {
+  border-left-color: #f92672;
+  background-color: rgba(249, 38, 114, 0.07);
+}
+
+.callout-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ae81ff;
+  margin-bottom: 0.3rem;
+}
+
+.callout.note .callout-label      {
+  color: #e6db74;
+}
+
+.callout.hint .callout-label      {
+  color: #66d9ef;
+}
+
+.callout.ok .callout-label        {
+  color: #a6e22e;
+}
+
+.callout.warn .callout-label,
+.callout.important .callout-label {
+  color: #f92672;
+}
+
+blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 .hover\:underline:hover {

@@ -1,0 +1,14 @@
+{{- if eq .Type "alert" -}}
+{{- $kind := lower .AlertType -}}
+{{- $cls := $kind -}}
+{{- if eq $kind "note" }}{{ $cls = "hint" }}{{ end -}}
+{{- if eq $kind "tip" }}{{ $cls = "ok" }}{{ end -}}
+{{- if eq $kind "caution" }}{{ $cls = "warn" }}{{ end -}}
+{{- if eq $kind "warning" }}{{ $cls = "warn" }}{{ end -}}
+<blockquote class="callout {{ $cls }}">
+  <div class="callout-label">{{ $kind }}</div>
+  {{ .Text }}
+</blockquote>
+{{- else -}}
+<blockquote>{{ .Text }}</blockquote>
+{{- end -}}
